@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ATM Instructions</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+       
+       body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.shutterstock.com/image-vector/insert-atm-card-credit-slot-600nw-1940138038.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url('https://www.shutterstock.com/image-vector/insert-atm-card-credit-slot-600nw-1940138038.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: blur(5px);
+        }
+        .atm-container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        ol {
+            padding-left: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="atm-container">
+    <h1>ATM Instructions</h1>
+
+    <p>Welcome to our ATM service! Follow the instructions below for a smooth transaction:</p>
+
+    <ol>
+        <li>Insert your ATM card into the card reader with the chip facing up.</li>
+        <li>Enter your PIN using the keypad provided.</li>
+        <li>Select your desired transaction (e.g., Withdraw, Deposit, Balance Inquiry).</li>
+        <li>Follow the on-screen instructions to complete the transaction.</li>
+        <li>Remember to take your card and transaction receipt before leaving the ATM.</li>
+    </ol>
+
+    <p>If you encounter any issues or have questions, please contact our customer support.</p>
+    <a href="trans.php" class="btn btn-secondary">Back</a>
+</div>
+
+<!-- Bootstrap JS and Popper.js (optional) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

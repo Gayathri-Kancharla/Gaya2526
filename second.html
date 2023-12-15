@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+   
+    <style>
+       body {
+       
+      margin: 0;
+      padding: 0;
+      background-image: url('https://www.shutterstock.com/image-vector/insert-atm-card-credit-slot-600nw-1940138038.jpg'); /* Replace with the actual path to your image */
+      background-size: 90%;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('https://www.shutterstock.com/image-vector/insert-atm-card-credit-slot-600nw-1940138038.jpg'); /* Replace with the path to your image */
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); 
+    }
+h2{
+    color:blanchedalmond;
+}
+marquee{
+    font-size: 30px;
+    color:chartreuse;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 700;
+}
+        .container {
+            margin-top: 100px;
+        }
+        body {
+            /* Add a fade-in animation to the entire body */
+            animation: fadeIn 1s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Your existing styles */
+
+        /* Add some styles for the form */
+        form {
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            /* Add a slide-up animation to the form */
+            animation: slideUp 1s;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <marquee>DEAR CUSTOMER, WELCOME TO THE HOME PAGE</marquee>
+            <h2 class="text-center mb-4">Choose Your Account Type</h2>
+        </div>
+    </div>
+   
+    <!-- Add a form for account selection -->
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form id="accountForm" action="third.php" method="post">
+                <div class="form-group">
+                    <label for="accountType">Select Account Type:</label>
+                    <select class="form-control" id="accountType" name="accountType" required>
+                        <option value="savings">Savings Account</option>
+                        <option value="checking">Current Account</option>
+                    </select>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="redirectToSelectedAccount()">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+  function redirectToSelectedAccount() {
+        var selectedAccountType = document.getElementById('accountType').value;
+        if (selectedAccountType === 'savings') {
+            window.location.href = 'third.php'; 
+        } else if (selectedAccountType === 'checking') {
+            window.location.href = 'last.php'; 
+        }
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+
